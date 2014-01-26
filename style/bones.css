@@ -1,0 +1,500 @@
+/* Table of Contents
+=====================================================
+  #Full Grid (Default design for 1280)
+  #Main Grid (Default main design for 960)
+  #Table - Portrait
+  #Mobile - Landscape
+*/
+/* Size on each side */
+/* Include some sort of reset either in your html or uncomment the next
+   line to include it in your less code so it can be compiled into one
+   minified file. 
+*/
+/* Variables required for Less implementation
+    (Do not edit unless you know what you're doing)  */
+/* Total columns */
+/* #Full Grid
+===================================================== */
+/* Full Grid Size
+   Default: 1280 or greater. The new standard
+*/
+body {
+  margin: 0;
+}
+.container {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  width: 1263px;
+  /* Offsets */
+}
+.container .column,
+.container .columns {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container .one.column,
+.container .one.columns {
+  width: 58.9375px;
+}
+.container .two.columns {
+  width: 137.875px;
+}
+.container .three.columns {
+  width: 216.8125px;
+}
+.container .four.columns {
+  width: 295.75px;
+}
+.container .five.columns {
+  width: 374.6875px;
+}
+.container .six.columns {
+  width: 453.625px;
+}
+.container .seven.columns {
+  width: 532.5625px;
+}
+.container .eight.columns {
+  width: 611.5px;
+}
+.container .nine.columns {
+  width: 690.4375px;
+}
+.container .ten.columns {
+  width: 769.375px;
+}
+.container .eleven.columns {
+  width: 848.3125px;
+}
+.container .twelve.columns {
+  width: 927.25px;
+}
+.container .thirteen.columns {
+  width: 1006.1875px;
+}
+.container .fourteen.columns {
+  width: 1085.125px;
+}
+.container .fifteen.columns {
+  width: 1164.0625px;
+}
+.container .sixteen.columns {
+  width: 1243px;
+}
+.container .one-third.column {
+  width: 401px;
+}
+.container .two-thirds.column {
+  width: 822px;
+}
+.container .offset-1 {
+  padding-left: 58.9375px;
+}
+.container .offset-2 {
+  padding-left: 137.875px;
+}
+.container .offset-3 {
+  padding-left: 216.8125px;
+}
+.container .offset-4 {
+  padding-left: 295.75px;
+}
+.container .offset-5 {
+  padding-left: 374.6875px;
+}
+.container .offset-6 {
+  padding-left: 453.625px;
+}
+.container .offset-7 {
+  padding-left: 532.5625px;
+}
+.container .offset-8 {
+  padding-left: 611.5px;
+}
+.container .offset-9 {
+  padding-left: 690.4375px;
+}
+.container .offset-10 {
+  padding-left: 769.375px;
+}
+.container .offset-11 {
+  padding-left: 848.3125px;
+}
+.container .offset-12 {
+  padding-left: 927.25px;
+}
+.container .offset-13 {
+  padding-left: 1006.1875px;
+}
+.container .offset-14 {
+  padding-left: 1085.125px;
+}
+.container .offset-15 {
+  padding-left: 1164.0625px;
+}
+.container .offset-one-third {
+  padding-left: 401px;
+}
+.container .offset-two-thirds {
+  padding-left: 822px;
+}
+/* Main grid size.
+   Default is 960 to 1280. This is the old standard
+*/
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  .container {
+    width: 943px;
+    /* Offsets */
+  }
+  .container .one.column,
+  .container .one.columns {
+    width: 38.9375px;
+  }
+  .container .two.columns {
+    width: 97.875px;
+  }
+  .container .three.columns {
+    width: 156.8125px;
+  }
+  .container .four.columns {
+    width: 215.75px;
+  }
+  .container .five.columns {
+    width: 274.6875px;
+  }
+  .container .six.columns {
+    width: 333.625px;
+  }
+  .container .seven.columns {
+    width: 392.5625px;
+  }
+  .container .eight.columns {
+    width: 451.5px;
+  }
+  .container .nine.columns {
+    width: 510.4375px;
+  }
+  .container .ten.columns {
+    width: 569.375px;
+  }
+  .container .eleven.columns {
+    width: 628.3125px;
+  }
+  .container .twelve.columns {
+    width: 687.25px;
+  }
+  .container .thirteen.columns {
+    width: 746.1875px;
+  }
+  .container .fourteen.columns {
+    width: 805.125px;
+  }
+  .container .fifteen.columns {
+    width: 864.0625px;
+  }
+  .container .sixteen.columns {
+    width: 923px;
+  }
+  .container .one-third.column {
+    width: 294.3333333333333px;
+  }
+  .container .two-thirds.column {
+    width: 608.6666666666666px;
+  }
+  .container .offset-1 {
+    padding-left: 38.9375px;
+  }
+  .container .offset-2 {
+    padding-left: 97.875px;
+  }
+  .container .offset-3 {
+    padding-left: 156.8125px;
+  }
+  .container .offset-4 {
+    padding-left: 215.75px;
+  }
+  .container .offset-5 {
+    padding-left: 274.6875px;
+  }
+  .container .offset-6 {
+    padding-left: 333.625px;
+  }
+  .container .offset-7 {
+    padding-left: 392.5625px;
+  }
+  .container .offset-8 {
+    padding-left: 451.5px;
+  }
+  .container .offset-9 {
+    padding-left: 510.4375px;
+  }
+  .container .offset-10 {
+    padding-left: 569.375px;
+  }
+  .container .offset-11 {
+    padding-left: 628.3125px;
+  }
+  .container .offset-12 {
+    padding-left: 687.25px;
+  }
+  .container .offset-13 {
+    padding-left: 746.1875px;
+  }
+  .container .offset-14 {
+    padding-left: 805.125px;
+  }
+  .container .offset-15 {
+    padding-left: 864.0625px;
+  }
+  .container .offset-one-third {
+    padding-left: 294.3333333333333px;
+  }
+  .container .offset-two-thirds {
+    padding-left: 608.6666666666666px;
+  }
+}
+/* Medium sized grid. 
+   Default: 768 to 960. (Smaller resolutions, but not mobile)
+*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 751px;
+    /* Offsets */
+  }
+  .container .one.column,
+  .container .one.columns {
+    width: 26.9375px;
+  }
+  .container .two.columns {
+    width: 73.875px;
+  }
+  .container .three.columns {
+    width: 120.8125px;
+  }
+  .container .four.columns {
+    width: 167.75px;
+  }
+  .container .five.columns {
+    width: 214.6875px;
+  }
+  .container .six.columns {
+    width: 261.625px;
+  }
+  .container .seven.columns {
+    width: 308.5625px;
+  }
+  .container .eight.columns {
+    width: 355.5px;
+  }
+  .container .nine.columns {
+    width: 402.4375px;
+  }
+  .container .ten.columns {
+    width: 449.375px;
+  }
+  .container .eleven.columns {
+    width: 496.3125px;
+  }
+  .container .twelve.columns {
+    width: 543.25px;
+  }
+  .container .thirteen.columns {
+    width: 590.1875px;
+  }
+  .container .fourteen.columns {
+    width: 637.125px;
+  }
+  .container .fifteen.columns {
+    width: 684.0625px;
+  }
+  .container .sixteen.columns {
+    width: 731px;
+  }
+  .container .one-third.column {
+    width: 230.33333333333334px;
+  }
+  .container .two-thirds.column {
+    width: 480.6666666666667px;
+  }
+  .container .offset-1 {
+    padding-left: 26.9375px;
+  }
+  .container .offset-2 {
+    padding-left: 73.875px;
+  }
+  .container .offset-3 {
+    padding-left: 120.8125px;
+  }
+  .container .offset-4 {
+    padding-left: 167.75px;
+  }
+  .container .offset-5 {
+    padding-left: 214.6875px;
+  }
+  .container .offset-6 {
+    padding-left: 261.625px;
+  }
+  .container .offset-7 {
+    padding-left: 308.5625px;
+  }
+  .container .offset-8 {
+    padding-left: 355.5px;
+  }
+  .container .offset-9 {
+    padding-left: 402.4375px;
+  }
+  .container .offset-10 {
+    padding-left: 449.375px;
+  }
+  .container .offset-11 {
+    padding-left: 496.3125px;
+  }
+  .container .offset-12 {
+    padding-left: 543.25px;
+  }
+  .container .offset-13 {
+    padding-left: 590.1875px;
+  }
+  .container .offset-14 {
+    padding-left: 637.125px;
+  }
+  .container .offset-15 {
+    padding-left: 684.0625px;
+  }
+  .container .offset-one-third {
+    padding-left: 230.33333333333334px;
+  }
+  .container .offset-two-thirds {
+    padding-left: 480.6666666666667px;
+  }
+}
+/* Small/Mobile
+   Default: Anything below 768 is considered mobile. */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+  .container .columns,
+  .container .column {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 300px;
+  }
+  .container .offset-1,
+  .container .offset-2,
+  .container .offset-3,
+  .container .offset-4,
+  .container .offset-5,
+  .container .offset-6,
+  .container .offset-7,
+  .container .offset-8,
+  .container .offset-9,
+  .container .offset-10,
+  .container .offset-11,
+  .container .offset-12,
+  .container .offset-13,
+  .container .offset-14,
+  .container .offset-15,
+  .container .offset-one-third,
+  .container .offset-two-thirds {
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 460px;
+  }
+  .container .columns,
+  .container .column {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 460px;
+  }
+}
+/* #Mixins
+===================================================== */
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+.row,
+.clearfix {
+  zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/*  Add any styling that you want in each level of the grid. This will 
+    automatically be added to to the CSS when there is something there. */

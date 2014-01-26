@@ -1,0 +1,181 @@
+/* Table of Contents
+=====================================================
+  #Full Grid (Default design for 1280)
+  #Main Grid (Default main design for 960)
+  #Table - Portrait
+  #Mobile - Landscape
+*/
+
+// Adjust these only if you know what you're doing
+@fullGridMax: 1280px;
+@mainGridMax: 960px;
+@mediumGridMax: 768px;
+@smallGridMax: 480px;
+@smallGridMin: 320px;
+@columnMargin: 10px; /* Size on each side */
+
+/* Include some sort of reset either in your html or uncomment the next
+   line to include it in your less code so it can be compiled into one
+   minified file. 
+*/
+//@import "reset.less";
+
+
+/* Variables required for Less implementation
+    (Do not edit unless you know what you're doing)  */
+@fullGridMaxN: (@fullGridMax - 1px);
+@mainGridMaxN: (@mainGridMax - 1px);
+@mediumGridMaxN: (@mediumGridMax - 1px);
+@smallGridMaxN: (@smallGridMax - 1px);
+@tCl: 16; /* Total columns */
+@pad: 17px;
+/* #Full Grid
+===================================================== */
+
+/* Full Grid Size
+   Default: 1280 or greater. The new standard
+*/
+body { margin: 0 }
+.container {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  .column, .columns {
+    float: left;
+    display: inline;
+    margin-left: @columnMargin;
+    margin-right: @columnMargin;
+  }
+  .cc(@fullGridMax);
+}
+
+/* Main grid size.
+   Default is 960 to 1280. This is the old standard
+*/
+@media only screen and (min-width: @mainGridMax) and (max-width:~'@{fullGridMaxN}') {
+  .container { 
+    .cc(@mainGridMax); 
+    }
+}
+
+/* Medium sized grid. 
+   Default: 768 to 960. (Smaller resolutions, but not mobile)
+*/
+@media only screen and (min-width: @mediumGridMax) and (max-width:@mainGridMaxN) {
+  .container {
+    .cc(@mediumGridMax);
+  }
+}
+
+/* Small/Mobile
+   Default: Anything below 768 is considered mobile. */
+@media only screen and (max-width: @mediumGridMaxN) {
+  .container {
+    .ccm(@smallGridMin);
+
+    .offset-1,
+    .offset-2,
+    .offset-3,
+    .offset-4,
+    .offset-5,
+    .offset-6,
+    .offset-7,
+    .offset-8,
+    .offset-9,
+    .offset-10,
+    .offset-11,
+    .offset-12,
+    .offset-13,
+    .offset-14,
+    .offset-15,
+    .offset-one-third,
+    .offset-two-thirds, { padding-left: 0; }
+  }
+}
+
+@media only screen and (min-width: @smallGridMax) and (max-width: @mediumGridMaxN) {
+  .container {
+    .ccm(@smallGridMax);
+  }
+}
+
+
+/* #Mixins
+===================================================== */
+.cc(@width)
+{
+  width: @width - @pad; 
+
+  .one.column, .one.columns { width: (@width/16-@columnMargin*2 - @pad/16); }
+  .two.columns { width:(@width/16*2-@columnMargin*2 - @pad/16*2); }
+  .three.columns { width:(@width/16*3-@columnMargin*2 - @pad/16*3); }
+  .four.columns { width:(@width/16*4-@columnMargin*2 - @pad/16*4); }
+  .five.columns { width:(@width/16*5-@columnMargin*2 - @pad/16*5); }
+  .six.columns { width:(@width/16*6-@columnMargin*2 - @pad/16*6); }
+  .seven.columns { width:(@width/16*7-@columnMargin*2 - @pad/16*7); }
+  .eight.columns { width:(@width/16*8-@columnMargin*2 - @pad/16*8); }
+  .nine.columns { width:(@width/16*9-@columnMargin*2 - @pad/16*9); }
+  .ten.columns { width:(@width/16*10-@columnMargin*2 - @pad/16*10); }
+  .eleven.columns { width:(@width/16*11-@columnMargin*2 - @pad/16*11); }
+  .twelve.columns { width:(@width/16*12-@columnMargin*2 - @pad/16*12); }
+  .thirteen.columns { width:(@width/16*13-@columnMargin*2 - @pad/16*13); }
+  .fourteen.columns { width:(@width/16*14-@columnMargin*2 - @pad/16*14); }
+  .fifteen.columns { width:(@width/16*15-@columnMargin*2 - @pad/16*15); }
+  .sixteen.columns { width:(@width - @columnMargin*2 - @pad); }
+
+  .one-third.column { width:(@width/3 - @columnMargin*2 - @pad/3); }
+  .two-thirds.column { width:(@width*2/3 - @columnMargin*2 - @pad*2/3); }
+
+  /* Offsets */
+
+  .offset-1 { padding-left: (@width/16-@columnMargin*2 - @pad/16); }
+  .offset-2 { padding-left:(@width/16*2-@columnMargin*2 - @pad/16*2); }
+  .offset-3 { padding-left:(@width/16*3-@columnMargin*2 - @pad/16*3); }
+  .offset-4 { padding-left:(@width/16*4-@columnMargin*2 - @pad/16*4); }
+  .offset-5 { padding-left:(@width/16*5-@columnMargin*2 - @pad/16*5); }
+  .offset-6 { padding-left:(@width/16*6-@columnMargin*2 - @pad/16*6); }
+  .offset-7 { padding-left:(@width/16*7-@columnMargin*2 - @pad/16*7); }
+  .offset-8 { padding-left:(@width/16*8-@columnMargin*2 - @pad/16*8); }
+  .offset-9 { padding-left:(@width/16*9-@columnMargin*2 - @pad/16*9); }
+  .offset-10 { padding-left:(@width/16*10-@columnMargin*2 - @pad/16*10); }
+  .offset-11 { padding-left:(@width/16*11-@columnMargin*2 - @pad/16*11); }
+  .offset-12 { padding-left:(@width/16*12-@columnMargin*2 - @pad/16*12); }
+  .offset-13 { padding-left:(@width/16*13-@columnMargin*2 - @pad/16*13); }
+  .offset-14 { padding-left:(@width/16*14-@columnMargin*2 - @pad/16*14); }
+  .offset-15 { padding-left:(@width/16*15-@columnMargin*2 - @pad/16*15); }
+
+  .offset-one-third { padding-left:(@width/3 - @columnMargin*2 - @pad/3); }
+  .offset-two-thirds { padding-left:(@width*2/3 - @columnMargin*2 - @pad*2/3); }
+}
+
+.ccm( @width ) {
+  width: (@width - @columnMargin*2); 
+  .columns, .column { 
+    margin-left: 0; 
+    margin-right: 0;
+  } 
+
+  .one.column,
+  .one.columns,
+  .two.columns,
+  .three.columns,
+  .four.columns,
+  .five.columns,
+  .six.columns,
+  .seven.columns,
+  .eight.columns,
+  .nine.columns,
+  .ten.columns,
+  .eleven.columns,
+  .twelve.columns,
+  .thirteen.columns,
+  .fourteen.columns,
+  .fifteen.columns,
+  .sixteen.columns,
+  .one-third.column,
+  .two-thirds.column { width: (@width - @columnMargin*2); } 
+}
+
+
+@import "clearing.less";
+@import "queries.less";
